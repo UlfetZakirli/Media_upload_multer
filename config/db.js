@@ -3,8 +3,6 @@ const mongoose = require('mongoose')
 module.exports = async function connection() {
     try {
         const connectionParams = {
-            useNewUrlParams: true,
-            useCreateIndex: true,
             useUnifiedTopology: true
         }
         await mongoose.connect(process.env.DB, connectionParams)
